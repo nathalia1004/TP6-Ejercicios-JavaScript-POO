@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+</head>
+<body>
+    <script>
+        //Ejerccio 2
+        let inicio = ["unacadena",3,9,1,10,500,1,10,-4,true];
+        let numeros =[];
+
+        for(let i = 0; i < inicio.length; i++){
+            if(typeof inicio[i] == 'number'){
+                numeros.push(inicio[i]);
+
+            }
+        }
+
+        for(let i = 0; i < numeros.length - 1; i++){
+            for(let j = 0; j < numeros.length - i - 1; j++){
+                if(numeros[j] > numeros[j + 1]){
+                let aux = numeros[j];
+                numeros[j] = numeros[j + 1];
+                numeros[j + 1] = aux;
+        }
+    }
+}
+
+console.log("ordenado: " + numeros); 
+        
+    </script>
+    
+</body>
+</html>
